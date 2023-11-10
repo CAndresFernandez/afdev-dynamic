@@ -5,5 +5,74 @@
 {% endblock %}
 
 {% block body %}
+  <main class="site-wrapper">
+    <div class="pt-table">
+      <div class="pt-tablecell page-works relative">
+        <!-- .close -->
+        <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+        <!-- /.close -->
 
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+              <div class="page-title text-center">
+                <h2>My <span class="primary">projects</span> <span class="title-bg">projects</span></h2>
+                <p>Look around, and check back often... this is a constant work in progress.</p>
+              </div>
+            </div>
+          </div> <!-- /.row -->
+
+          <!-- filter -->
+          {# <div class="row">
+            <div class="col-xs-12">
+              <ul class="filter list-inline">
+                <li>
+                  <a href="#" class="active" data-filter="*">All</a>
+                </li>
+              </ul>
+            </div>
+          </div> #}
+
+          <div class="row isotope-gutter">
+            <div class="col-xs-12 col-sm-6 col-md-4"></div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <figure class="works-item">
+                <img src="../public/theme/images/works/github.png" alt="github" />
+                <div class="overlay"></div>
+                <figcaption class="works-inner">
+                  <h4>My Github</h4>
+                  <p>All of my public Github repositories</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4"></div>
+
+            <!-- if necessary to add smaller tabs on two rows -->
+            {# <div class="col-xs-12 col-sm-6 col-md-4 Illustrator">
+              <figure class="works-item">
+                <img src="../public/theme/images/works/2.jpg" alt="" />
+                <div class="overlay"></div>
+                <figcaption class="works-inner">
+                  <h4>Project Name</h4>
+                  <p>Illustration, Digital Art</p>
+                </figcaption>
+              </figure>
+            </div>
+            #}
+          </div> <!-- /.row -->
+        </div> <!-- /.container -->
+
+        <nav class="page-nav clear">
+          <div class="container">
+            <div class="flex flex-middle space-between">
+              <span class="prev-page"><a href="{{ path('app_about') }}" class="link">&larr; About Me</a></span>
+              <span class="next-page"><a href="{{ path('app_cv') }}" class="link">My CV &rarr;</a></span>
+            </div>
+          </div>
+          <!-- /.page-nav -->
+        </nav>
+        <!-- /.container -->
+      </div> <!-- /.pt-tablecell -->
+    </div> <!-- /.pt-table -->
+  </main> <!-- /.site-wrapper -->
 {% endblock %}

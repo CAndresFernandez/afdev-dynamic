@@ -24,5 +24,10 @@ class MainController extends AbstractController
         return $this->render('main/projects.html.twig');
     }
 
+    #[Route('/cv', name: 'app_cv')]
+    public function cv() {
+        return $this->render('main/cv.html.twig');
+    }
+
 
 }
