@@ -1046,6 +1046,11 @@ label {
     background-position: center bottom;
 }
 
+.contact-wrapper {
+    margin: auto;
+    width: 33%;
+}
+
 .contact-block {
     margin-bottom: 30px;
 }
