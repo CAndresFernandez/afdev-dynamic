@@ -1234,18 +1234,18 @@ label {
 }
 
 /* =================================== */
-/*  Color Switcher
+/*  Language Switcher
 /* =================================== */
 .preview-wrapper {
     background-color: #fff;
     border: 1px solid #ddd;
     border-right: 0;
     color: #333;
-    height: 150px;
+    height: 48px;
     right: 0px;
     position: fixed;
-    top: 100px;
-    width: 260px;
+    top: 96px;
+    width: 72px;
     z-index: 1200;
     transition: all 0.4s ease-in-out 0s;
     transform: translateX(100%);
@@ -1259,15 +1259,10 @@ label {
     color: #333;
     font-size: 18px;
     font-weight: 600;
-    height: 46px;
-    line-height: 46px;
-    position: relative;
-}
-
-.switcher-head span {
-    border-bottom: 2px solid #eeeeee;
-    display: block;
-    margin: 0 20px;
+    height: 48px;
+    vertical-align: middle;
+    line-height: 48px;
+    position: fixed;
 }
 
 .switcher-trigger {
@@ -1278,70 +1273,25 @@ label {
     font-size: 20px;
     height: 48px;
     left: -48px;
-    line-height: 46px;
+    line-height: 48px;
     position: absolute;
     text-align: center;
     top: -1px;
     width: 48px;
 }
 
-.switcher-body {
-    background-color: #fff;
-    height: calc(100% - 50px);
-    left: 0;
-    padding: 20px;
-    position: fixed;
-    right: 0;
-    top: 47px;
-    outline: none;
-}
-
-.switcher-body h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.switcher-body select {
-    border: 1px solid #e5e5e5;
-    height: 40px;
-    margin-bottom: 20px;
-    width: 100%;
-    -webklit--appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.color-options {
-    margin-bottom: 10px;
+.lang-options {
     padding: 0;
 }
 
-.color-options li {
+.lang-options li {
     display: inline-block;
-    background-color: #e6ae03;
-    height: 30px;
-    margin-bottom: 10px;
-    margin-right: 6px;
-    text-indent: -9999em;
-    width: 30px;
+    margin: 0 2px;
+    line-height: 36px;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: #0c0f15;
     cursor: pointer;
-}
-
-.color-options li.c0 {
-    background-color: #f9423a;
-}
-
-.color-options li.c1 {
-    background-color: #02b7ce;
-}
-
-.color-options li.c2 {
-    background-color: #86a438;
-}
-
-.color-options li.c3 {
-    background-color: #f3a36d;
 }
 
 .pattern-options li {
