@@ -1,0 +1,142 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Andres Fernandez
+{% endblock %}
+
+{% block body %}
+  <main class="site-wrapper">
+    <div class="pt-table">
+      <div class="pt-tablecell page-resume relative">
+        <!-- .close -->
+        <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+        <!-- /.close -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+              <div class="page-title text-center">
+                <h2>My <span class="primary">CV</span> <span class="title-bg"></span></h2>
+                <p>Determined, rigorous, and passionate professional who began programming in 2023. Vastly experienced in autonomous and collaborative execution of complex tasks requiring an elevated degree of analysis, critical thinking, and adaptability. Insatiable apprentice on an eternal quest to master his craft, no matter the challenge.</p>
+              </div>
+            </div>
+          </div> <!-- /.row -->
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="history-block">
+                <div class="section-title light clear">
+                  <h3>Education</h3>
+                </div>
+                <!-- /.section-title -->
+                <div class="history-scroller">
+                  <div class="history-item">
+                    <div class="history-icon">
+                      <span class="history-hex"></span>
+                      <i class="bi bi-laptop"></i>
+                    </div>
+                    <div class="history-text">
+                      <h5>École O'clock</h5>
+                      <span>May - October 2023</span>
+                      <p>
+                        Fullstack web development <br /> Specialisation PHP/Symfony
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /.history-item -->
+                  <div class="history-item">
+                    <div class="history-icon">
+                      <span class="history-hex"></span>
+                      <i class="tf-documents5"></i>
+                    </div>
+                    <div class="history-text">
+                      <h5>Georgia State University</h5>
+                      <span>2006 - 2007</span>
+                      <p>
+                        <em>Major</em>: History <br /><em>Minor</em>: German Language
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /.history-item -->
+                  <div class="history-item">
+                    <div class="history-icon">
+                      <span class="history-hex"></span>
+                      <i class="fa-solid fa-kitchen-set"></i>
+                    </div>
+                    <div class="history-text">
+                      <h5>Art Institute of Atlanta</h5>
+                      <span>2004 - 2006</span>
+                      <p>Culinary Arts &amp; Hospitality Management</p>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- /.history-block -->
+            </div> <!-- /.col -->
+            <div class="col-xs-12 col-sm-6">
+              <div class="history-block">
+                <div class="section-title light clear">
+                  <h3>Experiences</h3>
+                </div>
+                <!-- /.section-title -->
+                <div class="history-scroller">
+                  <div class="history-item">
+                    <div class="history-icon">
+                      <span class="history-hex"></span>
+                      <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <div class="history-text">
+                      <h5>Les Cuistots Migrateurs</h5>
+                      <span>2017 - 2022</span>
+                      <p>
+                        <b>Managing Partner &amp; Culinary Director</b><br /> Drove planning, sourcing, production, training, staffing, R&amp;D, and cost control through a period of exponential growth. <br />Developed culinary program for the culinary school founded by the company's non-profit branch in 2021.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /.history-item -->
+                  <div class="history-item">
+                    <div class="history-icon">
+                      <span class="history-hex"></span>
+                      <i class="fa-solid fa-kitchen-set"></i>
+                    </div>
+                    <div class="history-text">
+                      <h5>La Bourse et La Vie</h5>
+                      <span>2015 - 2017</span>
+                      <p>
+                        <b>Chef de cuisine</b> <br />Managed opening of the restaurant in 2015, including menu development, planning, product sourcing, hiring, training, execution, and cost management. <br />Nurtured the spirit of excellence, simplicity, and precision the company is known for.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /.history-item -->
+                  <div class="history-item">
+                    <div class="history-icon">
+                      <span class="history-hex"></span>
+                      <i class="fa-solid fa-kitchen-set"></i>
+                    </div>
+                    <div class="history-text">
+                      <h5>Spring Restaurant</h5>
+                      <span>2013 - 2015</span>
+                      <p>
+                        <b>Sous-Chef de cuisine</b> <br />Key member of high-performance team providing Michelin-level food and service.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- /.history-block -->
+            </div> <!-- /.col -->
+          </div> <!-- /.row -->
+        </div> <!-- /.container -->
+
+        <nav class="page-nav clear">
+          <div class="container">
+            <div class="flex flex-middle space-between">
+              <span class="prev-page"><a href="{{ path('app_projects') }}" class="link">&larr; Projects</a></span>
+              <span class="next-page"><a href="{{ path('app_contact') }}" class="link">Contact Me &rarr;</a></span>
+            </div>
+          </div>
+          <!-- /.page-nav -->
+        </nav>
+        <!-- /.container -->
+      </div> <!-- /.pt-tablecell -->
+    </div> <!-- /.pt-table -->
+  </main> <!-- /.site-wrapper -->
+{% endblock %}

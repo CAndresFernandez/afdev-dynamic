@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Andres Fernandez
+{% endblock %}
+
+{% block body %}
+  <main class="site-wrapper">
+    <div class="pt-table">
+      <div class="pt-tablecell page-contact relative">
+        <!-- .close -->
+        <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+        <!-- /.close -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+              <div class="page-title text-center">
+                <h2>Get in <span class="primary">touch</span> <span class="title-bg"></span></h2>
+                <p>Send me an message if you have any questions, or just want to chat.</p>
+              </div>
+            </div>
+          </div> <!-- /.row -->
+
+          <div class="row contact-wrapper">
+            <div class="contact-block">
+              <div class="media">
+                <div class="media-left">
+                  <i class="tf-envelope2"></i>
+                </div>
+                <div class="media-body">
+                  <h4>Email</h4>
+                  <p>
+                    <a href="mailto:c.andresfernandez.dev@gmail.com">c.andresfernandez.dev@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-block">
+              <div class="media">
+                <div class="media-left">
+                  <i class="bi bi-linkedin"></i>
+                </div>
+                <div class="media-body">
+                  <h4>LinkedIn</h4>
+                  <p>
+                    <a href="https://www.linkedin.com/in/andresfernandezdev/" target="_blank">click to see my profile</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <nav class="page-nav clear">
+            <div class="container">
+              <div class="flex flex-middle space-between">
+                <span class="prev-page"><a href="{{ path('app_cv') }}" class="link">&larr; My CV</a></span>
+              </div>
+            </div>
+            <!-- /.page-nav -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Andres Fernandez
+{% endblock %}
+
+{% block body %}
+  <main class="site-wrapper">
+    <div class="pt-table">
+      <div class="pt-tablecell page-about relative">
+        <!-- .close -->
+        <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+        <!-- /.close -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+              <div class="page-title text-center">
+                <h2>About <span class="primary">me</span> <span class="title-bg"></span></h2>
+                <p>After a fruitful 18-year career as a professional chef, I made the big switch to programming. Now I'm on the hunt for quality experience in back-end development wherever I can get it.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+              <div class="about-author">
+                <figure class="author-thumb">
+                  <img src="../public/theme/images/headshotandy.jpeg" alt="headshot andy" />
+                </figure> <!-- /.author-bio -->
+                <div class="author-desc">
+                  <p>
+                    <b>From:</b> Atlanta, Georgia
+                  </p>
+                  <p>
+                    <b>Living in:</b> Paris, France
+                  </p>
+                  <p>
+                    <b>Speaks:</b> English, Français, Español, Deutsch, 한국어
+                  </p>
+                  <p>
+                    <b>Interests:</b> Arsenal FC, Gaming, Tennis, Hiking, Amari, Guitar
+                  </p>
+                </div>
+                <!-- /.author-desc -->
+              </div> <!-- /.about-author -->
+              <p>A decidedly atypical profile indeed, but I am insatiably curious, meticulous, and passionate about clean, scalable code. Even better, I come equipped with soft skills and an attention to detail that only experience can provide.</p>
+            </div> <!-- /.col -->
+
+            <div class="col-xs-12 col-md-6">
+              <div class="section-title clear">
+                <h3>Skills</h3>
+              </div>
+              <div class="skill-wrapper">
+                <div class="progress clear">
+                  <div class="skill-name">PHP 7+</div>
+                  <div class="skill-bar">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="skill-lavel" data-skill-value="80%"></div>
+                </div> <!-- /.progress -->
+                <div class="progress clear">
+                  <div class="skill-name">Symfony 5+</div>
+                  <div class="skill-bar">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="skill-lavel" data-skill-value="80%"></div>
+                </div> <!-- /.progress -->
+                <div class="progress clear">
+                  <div class="skill-name">Laravel</div>
+                  <div class="skill-bar">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="skill-lavel" data-skill-value="50%"></div>
+                </div> <!-- /.progress -->
+                <div class="progress clear">
+                  <div class="skill-name">RESTful APIs</div>
+                  <div class="skill-bar">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="skill-lavel" data-skill-value="70%"></div>
+                </div> <!-- /.progress -->
+                <div class="progress clear">
+                  <div class="skill-name">MySQL</div>
+                  <div class="skill-bar">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="skill-lavel" data-skill-value="70%"></div>
+                </div> <!-- /.progress -->
+                <div class="progress clear">
+                  <div class="skill-name">HTML5/CSS3</div>
+                  <div class="skill-bar">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="skill-lavel" data-skill-value="70%"></div>
+                </div> <!-- /.progress -->
+                <div class="progress clear">
+                  <div class="skill-name">React JS</div>
+                  <div class="skill-bar">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="skill-lavel" data-skill-value="25%"></div>
+                </div> <!-- /.progress -->
+              </div> <!-- /.skill-wrapper -->
+            </div> <!-- /.col -->
+          </div> <!-- /.row -->
+        </div> <!-- /.container -->
+
+        <nav class="page-nav clear">
+          <div class="container">
+            <div class="flex flex-middle space-between">
+              <span class="next-page"><a href="{{ path('app_projects') }}" class="link">Projects &rarr;</a></span>
+            </div>
+          </div>
+          <!-- /.page-nav -->
+        </nav>
+        <!-- /.container -->
+      </div> <!-- /.pt-tablecell -->
+    </div> <!-- /.pt-table -->
+  </main> <!-- /.site-wrapper -->
+{% endblock %}
