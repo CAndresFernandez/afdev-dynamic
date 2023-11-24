@@ -1,0 +1,54 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}
+  Experience List
+{% endblock %}
+{% block expActive %}
+  active
+{% endblock %}
+{% block body %}
+  <div class="container-fluid">
+    <h1>Experience List</h1>
+    <a href="{{ path('app_back_experience_new') }}"><button type="button" class="btn btn-primary mb-3 bi bi-plus-lg"></button></a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Start Year</th>
+          <th>End Year</th>
+          <th>Location</th>
+          <th>Job Title</th>
+          <th>Responsibility A</th>
+          <th>Responsibility B</th>
+          <th>Responsibility C</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for experience in experiences %}
+          <tr>
+            <td>{{ experience.company }}</td>
+            <td>{{ experience.startYear }}</td>
+            <td>{{ experience.endYear }}</td>
+            <td>{{ experience.location }}</td>
+            <td>{{ experience.title }}</td>
+            <td>{{ experience.respA }}</td>
+            {% if experience.respB %}
+              <td>{{ experience.respB }}</td>
+            {% endif %}
+            {% if experience.respC %}
+              <td>{{ experience.respC }}</td>
+            {% endif %}
+            <td>
+              <a href="{{ path('app_back_experience_show', { id: experience.id }) }}"><button type="button" class="btn btn-info btn-sm bi bi-eye"></button></a>
+              <a href="{{ path('app_back_experience_edit', { id: experience.id }) }}"><button type="button" class="btn btn-warning btn-sm bi bi-pencil-square"></button></a>
+            </td>
+          </tr>
+        {% else %}
+          <tr>
+            <td colspan="8">No records found</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

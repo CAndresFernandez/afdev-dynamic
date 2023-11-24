@@ -1,0 +1,15 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}
+  New Experience
+{% endblock %}
+
+{% block body %}
+  <div class="container-fluid">
+    <h1>Create new Experience</h1>
+
+    {{ include('back/experience/_form.html.twig') }}
+
+    <a href="{{ path('app_back_experience_list') }}"><button type="button" class="btn btn-sm btn-primary mx-1 mb-2 bi bi-arrow-left-square">Back to list</button></a>
+  </div>
+{% endblock %}
