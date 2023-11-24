@@ -30,16 +30,10 @@ class Experience
     private ?string $jobTitle = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $respA = null;
-
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $respB = null;
-
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $respC = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $icon = null;
+
+    #[ORM\Column(type: Types::JSON)]
+    private array $responsibilities = [];
 
     public function getId(): ?int
     {
@@ -106,42 +100,6 @@ class Experience
         return $this;
     }
 
-    public function getRespA(): ?string
-    {
-        return $this->respA;
-    }
-
-    public function setRespA(string $respA): static
-    {
-        $this->respA = $respA;
-
-        return $this;
-    }
-
-    public function getRespB(): ?string
-    {
-        return $this->respB;
-    }
-
-    public function setRespB(?string $respB): static
-    {
-        $this->respB = $respB;
-
-        return $this;
-    }
-
-    public function getRespC(): ?string
-    {
-        return $this->respC;
-    }
-
-    public function setRespC(?string $respC): static
-    {
-        $this->respC = $respC;
-
-        return $this;
-    }
-
     public function getIcon(): ?string
     {
         return $this->icon;
@@ -150,6 +108,18 @@ class Experience
     public function setIcon(string $icon): static
     {
         $this->icon = $icon;
+
+        return $this;
+    }
+
+    public function getResponsibilities(): array
+    {
+        return $this->responsibilities;
+    }
+
+    public function setResponsibilities(array $responsibilities): static
+    {
+        $this->responsibilities = $responsibilities;
 
         return $this;
     }

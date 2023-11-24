@@ -1,4 +1,22 @@
 {{ form_start(form) }}
-{{ form_widget(form) }}
-<button class="btn btn-warning btn-sm mx-1 mb-2 bi bi-save">{{ button_label|default(' Create') }}</button>
+
+<div id="responsibilities-container" data-prototype="{{ form_widget(form.responsibilities.vars.prototype)|e('html_attr') }}"></div>
+
 {{ form_end(form) }}
+<button type="button" class="add-another-collection-widget">Add Another Responsibility</button>
+<div>
+  <button class="btn btn-warning btn-sm mx-1 mb-2 bi bi-save">{{ button_label|default(' Create') }}</button>
+  <a href="{{ path('app_back_experience_list') }}"><button type="button" class="btn btn-sm btn-primary mx-1 mb-2 bi bi-arrow-left-square">Back to list</button></a>
+</div>
+<script>
+  var container = document.getElementById('responsibilities-container')
+  var index = container.children.length
+  
+  document.querySelector('.add-another-collection-widget').addEventListener('click', function () {
+    var prototype = container.getAttribute('data-prototype')
+    var newForm = prototype.replace(/__name__/g, index)
+    // $(container).children(':last-child').after(newForm)
+    container.insertAdjacentHTML('beforeend', newForm)
+    index++
+  })
+</script>

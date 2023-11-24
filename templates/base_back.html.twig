@@ -8,7 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-    {# <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> #}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <title>afdev backoffice</title>
   </head>
@@ -23,22 +24,22 @@
                 <li class="nav-item">
                   <a class="nav-link {% block eduActive %}
                     {% endblock %}"
-                    href="#">
-                    Education
+                    href="{{ path('app_back_education_list') }}">
+                    <i class="bi"></i>Education
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link {% block expActive %}
                     {% endblock %}"
-                    href="#">
-                    <i class="bi"></i> Experience
+                    href="{{ path('app_back_experience_list') }}">
+                    <i class="bi"></i>Experience
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link {% block techActive %}
                     {% endblock %}"
-                    href="#">
-                    <i class="bi"></i>Technologies
+                    href="{{ path('app_back_tech_list') }}">
+                    <i class="bi"></i>Technology
                   </a>
                 </li>
               </ul>
@@ -58,8 +59,6 @@
 
       <!-- Footer -->
       <footer class="container-fluid py-4 text-center"></footer>
-
-      <!-- Optional JavaScript; choose one of the two! -->
 
       <!-- Option 1: Bootstrap Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
