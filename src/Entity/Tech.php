@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\SkillRepository;
+use App\Repository\TechRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: SkillRepository::class)]
-class Skill
+#[ORM\Entity(repositoryClass: TechRepository::class)]
+class Tech
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -16,8 +16,8 @@ class Skill
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column]
-    private ?int $percentage = null;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $version = null;
 
     public function getId(): ?int
     {
@@ -36,14 +36,14 @@ class Skill
         return $this;
     }
 
-    public function getPercentage(): ?int
+    public function getVersion(): ?string
     {
-        return $this->percentage;
+        return $this->version;
     }
 
-    public function setPercentage(int $percentage): static
+    public function setVersion(?string $version): static
     {
-        $this->percentage = $percentage;
+        $this->version = $version;
 
         return $this;
     }
