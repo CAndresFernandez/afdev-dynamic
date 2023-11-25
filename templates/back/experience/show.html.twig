@@ -28,24 +28,27 @@
         </tr>
         <tr>
           <th>Job Title</th>
-          <td>{{ experience.title }}</td>
+          <td>{{ experience.jobTitle }}</td>
         </tr>
         <tr>
-          <th>Responsibility A</th>
-          <td>{{ experience.respA }}</td>
+          <th>Responsibilities</th>
+          <td class="p-0">
+            <table class="table table-hover m-0">
+              <tbody>
+                {% for resp in experience.responsibilities %}
+                  <tr>
+                    {% if loop.last %}
+                      <td class="border-bottom-0">{{ resp }}</td>
+                    {% else %}
+                      <td>{{ resp }}</td>
+                    {% endif %}
+                  </tr>
+                {% endfor %}
+                {# {{ experience.responsibilities|json_encode(constant('JSON_PRETTY_PRINT'))|nl2br|raw }} #}
+              </tbody>
+            </table>
+          </td>
         </tr>
-        {% if respB %}
-          <tr>
-            <th>Responsibility B</th>
-            <td>{{ experience.respB }}</td>
-          </tr>
-        {% endif %}
-        {% if respC %}
-          <tr>
-            <th>Responsibility C</th>
-            <td>{{ experience.respC }}</td>
-          </tr>
-        {% endif %}
       </tbody>
     </table>
 

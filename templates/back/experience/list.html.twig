@@ -18,9 +18,7 @@
           <th>End Year</th>
           <th>Location</th>
           <th>Job Title</th>
-          <th>Responsibility A</th>
-          <th>Responsibility B</th>
-          <th>Responsibility C</th>
+          <th>Responsibilities</th>
         </tr>
       </thead>
       <tbody>
@@ -30,8 +28,23 @@
             <td>{{ experience.startYear }}</td>
             <td>{{ experience.endYear }}</td>
             <td>{{ experience.location }}</td>
-            <td>{{ experience.title }}</td>
-            <td>{{ experience.responsibilities }}</td>
+            <td>{{ experience.jobTitle }}</td>
+            <td class="p-0">
+              <table class="table table-hover m-0">
+                <tbody>
+                  {% for resp in experience.responsibilities %}
+                    <tr>
+                      {% if loop.last %}
+                        <td class="border-bottom-0">{{ resp }}</td>
+                      {% else %}
+                        <td>{{ resp }}</td>
+                      {% endif %}
+                    </tr>
+                  {% endfor %}
+                  {# {{ experience.responsibilities|json_encode(constant('JSON_PRETTY_PRINT'))|nl2br|raw }} #}
+                </tbody>
+              </table>
+            </td>
             <td>
               <a href="{{ path('app_back_experience_show', { id: experience.id }) }}"><button type="button" class="btn btn-info btn-sm bi bi-eye"></button></a>
               <a href="{{ path('app_back_experience_edit', { id: experience.id }) }}"><button type="button" class="btn btn-warning btn-sm bi bi-pencil-square"></button></a>

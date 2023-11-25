@@ -19,7 +19,7 @@ security:
       form_login:
         login_path: app_back_login
         check_path: app_back_login
-        default_target_path: app_back_home
+        default_target_path: app_back_education_list
       logout:
         path: app_back_logout
         target: app_back_login
