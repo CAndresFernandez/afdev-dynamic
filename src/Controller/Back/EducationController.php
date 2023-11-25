@@ -33,7 +33,7 @@ class EducationController extends AbstractController
             $entityManager->persist($education);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_education_list', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_back_education_list', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('/back/education/new.html.twig', [
@@ -50,7 +50,7 @@ class EducationController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'app_education_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/edit', name: 'app_back_education_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Education $education, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(EducationType::class, $education);
@@ -59,7 +59,7 @@ class EducationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_education_list', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_back_education_list', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('/back/education/edit.html.twig', [
@@ -76,6 +76,6 @@ class EducationController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('app_education_list', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_back_education_list', [], Response::HTTP_SEE_OTHER);
     }
 }
