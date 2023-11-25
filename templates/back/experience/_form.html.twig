@@ -7,16 +7,18 @@
   {{ form_row(form.jobTitle) }}
   {{ form_row(form.icon) }}
 
-  {% if form.responsibilities is iterable %}
-    {% for responsibilityForm in form.responsibilities %}
-      <div class="responsibility-item">
-        {{ form_row(responsibilityForm) }}
-        <button type="button" class="delete-responsibility btn btn-danger btn-sm mx-1 mb-2">Delete Responsibility</button>
-      </div>
-    {% endfor %}
+  {% if app.request.attributes.get('_route') == 'app_back_experience_edit' %}
+    {% if form.responsibilities is iterable %}
+      {% for responsibilityForm in form.responsibilities %}
+        <div class="responsibility-item">
+          {{ form_row(responsibilityForm) }}
+          <button type="button" class="delete-responsibility btn btn-danger btn-sm mx-1 mb-2">Delete Responsibility</button>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% else %}
+    <div id="responsibilities-container" data-prototype="{{ form_widget(form.responsibilities.vars.prototype)|e('html_attr') }}">{{ form_row(form.responsibilities) }}</div>
   {% endif %}
-
-  <div id="responsibilities-container" data-prototype="{{ form_widget(form.responsibilities.vars.prototype)|e('html_attr') }}"></div>
 
   <button type="button" class="add-another-collection-widget btn btn-secondary btn-sm mx-1 mb-2">Add a Responsibility</button>
 
