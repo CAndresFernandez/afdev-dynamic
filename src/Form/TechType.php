@@ -15,7 +15,9 @@ class TechType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('version', NumberType::class)
+            ->add('version', NumberType::class, [
+                'required' => false
+            ])
         ;
     }
 

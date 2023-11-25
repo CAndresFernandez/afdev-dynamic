@@ -21,9 +21,9 @@
         {% for tech in techs %}
           <tr>
             <td>{{ tech.name }}</td>
-            {% if tech.version %}
-              <td>{{ tech.version }}</td>
-            {% endif %}
+            <td>
+              {% if tech.version %}{{ tech.version }}{% endif %}
+            </td>
             <td>
               <a href="{{ path('app_back_tech_show', { id: tech.id }) }}"><button type="button" class="btn btn-info btn-sm bi bi-eye"></button></a>
               <a href="{{ path('app_back_tech_edit', { id: tech.id }) }}"><button type="button" class="btn btn-warning btn-sm bi bi-pencil-square"></button></a>

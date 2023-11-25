@@ -19,8 +19,16 @@ class ExperienceType extends AbstractType
     {
         $builder
             ->add('company', TextType::class)
-            ->add('startYear', NumberType::class)
-            ->add('endYear', NumberType::class)
+            ->add('startYear', ChoiceType::class, [
+                'choices' => $this->getYears(),
+                'placeholder' => 'Select a year',
+                'required' => true,
+            ])
+            ->add('endYear', ChoiceType::class, [
+                'choices' => $this->getYears(),
+                'placeholder' => 'Select a year',
+                'required' => true,
+            ])
             ->add('location', TextType::class)
             ->add('jobTitle', TextType::class)
             ->add('icon', ChoiceType::class, [
@@ -52,4 +60,11 @@ class ExperienceType extends AbstractType
             'data_class' => Experience::class,
         ]);
     }
+
+    private function getYears() {
+        $currentYear = (int) date('Y');
+        $years = array_flip(range(1975, $currentYear));
+        return $years;
+    }
+
 }

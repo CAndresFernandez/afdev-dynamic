@@ -29,10 +29,12 @@ class EducationType extends AbstractType
             ->add('startMonth', ChoiceType::class, [
                 'choices' => $this->getMonths(),
                 'placeholder' => 'Select a month',
+                'required' => false
             ])
             ->add('endMonth', ChoiceType::class, [
                 'choices' => $this->getMonths(),
                 'placeholder' => 'Select a month',
+                'required' => false
             ])
             ->add('field', TextType::class)
             ->add('icon', ChoiceType::class, [
