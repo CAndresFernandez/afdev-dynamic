@@ -19,7 +19,9 @@
       </div>
     {% endif %}
   {% else %}
-    <div id="responsibilities-container" data-prototype="{{ form_row(form.responsibilities.vars.prototype)|e('html_attr') }}"></div>
+    <div id="responsibilities-container" data-prototype="{{ form_row(form.responsibilities.vars.prototype)|e('html_attr') }}">
+      <div class="responsibility-item">{{ form_row(form.responsibilities) }}</div>
+    </div>
   {% endif %}
 
   <button type="button" class="add-another-collection-widget btn btn-secondary btn-sm mx-1 mb-2">Add a Responsibility</button>
