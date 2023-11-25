@@ -41,8 +41,7 @@ class ExperienceType extends AbstractType
                 'entry_type' => TextareaType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
-                'by_reference' => false, // Add this line
-                'prototype' => true
+                'prototype' => true,
             ])
         ;
     }

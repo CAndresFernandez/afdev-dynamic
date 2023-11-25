@@ -9,15 +9,17 @@
 
   {% if app.request.attributes.get('_route') == 'app_back_experience_edit' %}
     {% if form.responsibilities is iterable %}
-      {% for responsibilityForm in form.responsibilities %}
-        <div class="responsibility-item">
-          {{ form_row(responsibilityForm) }}
-          <button type="button" class="delete-responsibility btn btn-danger btn-sm mx-1 mb-2">Delete Responsibility</button>
-        </div>
-      {% endfor %}
+      <div id="responsibilities-container" data-prototype="{{ form_row(form.responsibilities.vars.prototype)|e('html_attr') }}">
+        {% for responsibilityForm in form.responsibilities %}
+          <div class="responsibility-item">
+            {{ form_row(responsibilityForm) }}
+            <button type="button" class="delete-responsibility btn btn-danger btn-sm mx-1 mb-2">Delete Responsibility</button>
+          </div>
+        {% endfor %}
+      </div>
     {% endif %}
   {% else %}
-    <div id="responsibilities-container" data-prototype="{{ form_widget(form.responsibilities.vars.prototype)|e('html_attr') }}">{{ form_row(form.responsibilities) }}</div>
+    <div id="responsibilities-container" data-prototype="{{ form_row(form.responsibilities.vars.prototype)|e('html_attr') }}"></div>
   {% endif %}
 
   <button type="button" class="add-another-collection-widget btn btn-secondary btn-sm mx-1 mb-2">Add a Responsibility</button>
@@ -43,7 +45,19 @@
   
   document.querySelector('.add-another-collection-widget').addEventListener('click', function () {
     var container = document.getElementById('responsibilities-container')
-    var index = container.children.length
+    var lengthLabels = container.getElementsByTagName('label').length
+  
+    if (container.getElementsByTagName('label')[lengthLabels - 1] === undefined) {
+      var lastLabelIndex = 0
+    } else {
+      var lastLabelIndex = parseInt(container.getElementsByTagName('label')[lengthLabels - 1].innerHTML)
+    }
+  
+    if (container.children.length == 0) {
+      var index = 1
+    } else if (container.children.length > 0) {
+      var index = lastLabelIndex + 1
+    }
   
     var prototype = container.getAttribute('data-prototype')
     var newForm = prototype.replace(/__name__/g, index)
@@ -55,7 +69,7 @@
     var deleteButton = document.createElement('button')
     deleteButton.type = 'button'
     deleteButton.classList.add('delete-responsibility', 'btn', 'btn-danger', 'btn-sm', 'mx-1', 'mb-2')
-    deleteButton.textContent = 'Delete'
+    deleteButton.textContent = 'Delete Responsibility'
   
     responsibilityItem.appendChild(deleteButton)
     container.appendChild(responsibilityItem)
