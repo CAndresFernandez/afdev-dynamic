@@ -2,11 +2,23 @@
 
 namespace App\Entity;
 
-use App\Repository\ExperienceRepository;
+use ApiPlatform\Metadata\Get;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
+use App\Repository\ExperienceRepository;
 
 #[ORM\Entity(repositoryClass: ExperienceRepository::class)]
+#[ApiResource(
+    operations: [
+        new Get,
+        new GetCollection,
+    ],
+    order: [
+        'startYear' => 'ASC'
+    ]
+)]
 class Experience
 {
     #[ORM\Id]

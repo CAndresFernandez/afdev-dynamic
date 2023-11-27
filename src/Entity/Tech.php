@@ -2,10 +2,23 @@
 
 namespace App\Entity;
 
-use App\Repository\TechRepository;
+use ApiPlatform\Metadata\Get;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\TechRepository;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Delete;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Patch;
+use ApiPlatform\Metadata\Post;
+use ApiPlatform\Metadata\Put;
 
 #[ORM\Entity(repositoryClass: TechRepository::class)]
+#[ApiResource(
+    operations: [
+        new Get(uriTemplate: '/techs/{id}'),
+        new GetCollection(uriTemplate: '/techs'),
+    ]
+)]
 class Tech
 {
     #[ORM\Id]

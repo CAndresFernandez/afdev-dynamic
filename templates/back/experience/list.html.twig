@@ -22,7 +22,7 @@
         </tr>
       </thead>
       <tbody>
-        {% for experience in experiences %}
+        {% for experience in experiences|sort((a, b) => a.startYear <=> b.startYear) %}
           <tr>
             <td>{{ experience.company }}</td>
             <td>{{ experience.startYear }}</td>

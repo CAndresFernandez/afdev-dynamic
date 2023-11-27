@@ -14,15 +14,18 @@ class EducationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        $currentYear = date('Y');
+        $years = array_reverse(range(1975, $currentYear));
+
         $builder
             ->add('school', TextType::class)
             ->add('startYear', ChoiceType::class, [
-                'choices' => $this->getYears(),
+                'choices' => array_combine($years, $years),
                 'placeholder' => 'Select a year',
                 'required' => true,
             ])
             ->add('endYear', ChoiceType::class, [
-                'choices' => $this->getYears(),
+                'choices' => array_combine($years, $years),
                 'placeholder' => 'Select a year',
                 'required' => true,
             ])
@@ -60,12 +63,6 @@ class EducationType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Education::class,
         ]);
-    }
-
-    private function getYears() {
-        $currentYear = (int) date('Y');
-        $years = array_flip(range(1975, $currentYear));
-        return $years;
     }
 
     private function getMonths() {

@@ -17,15 +17,18 @@ class ExperienceType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        $currentYear = date('Y');
+        $years = array_reverse(range(1975, $currentYear));
+
         $builder
             ->add('company', TextType::class)
             ->add('startYear', ChoiceType::class, [
-                'choices' => $this->getYears(),
+                'choices' => array_combine($years, $years),
                 'placeholder' => 'Select a year',
                 'required' => true,
             ])
             ->add('endYear', ChoiceType::class, [
-                'choices' => $this->getYears(),
+                'choices' => array_combine($years, $years),
                 'placeholder' => 'Select a year',
                 'required' => true,
             ])
@@ -52,6 +55,7 @@ class ExperienceType extends AbstractType
                 'prototype' => true,
             ])
         ;
+        dump();
     }
 
     public function configureOptions(OptionsResolver $resolver): void
@@ -60,11 +64,4 @@ class ExperienceType extends AbstractType
             'data_class' => Experience::class,
         ]);
     }
-
-    private function getYears() {
-        $currentYear = (int) date('Y');
-        $years = array_flip(range(1975, $currentYear));
-        return $years;
-    }
-
 }

@@ -2,10 +2,23 @@
 
 namespace App\Entity;
 
-use App\Repository\EducationRepository;
+use ApiPlatform\Metadata\Get;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
+use App\Repository\EducationRepository;
 
 #[ORM\Entity(repositoryClass: EducationRepository::class)]
+#[ApiResource(
+
+    operations: [
+        new Get,
+        new GetCollection,
+    ],
+    order: [
+        'startYear' => 'ASC'
+    ]
+)]
 class Education
 {
     #[ORM\Id]

@@ -23,7 +23,7 @@
         </tr>
       </thead>
       <tbody>
-        {% for education in educations %}
+        {% for education in educations|sort((a, b) => a.startYear <=> b.startYear) %}
           <tr>
             <td>{{ education.school }}</td>
             <td>{{ education.startYear }}</td>
