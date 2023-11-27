@@ -14,18 +14,18 @@ body {
     font-size: 16px;
     line-height: 30px;
     color: #ababab;
-    height: 100%;
-    overflow: hidden;
+
+
 }
 
 a {
-    color: inherit;
+    color: #f9423a;
     transition: all 0.3s ease 0s;
 }
 
 a:hover,
 a:focus {
-    color: #ababab;
+    color: #ffffff;
     text-decoration: none;
     outline: 0 none;
 }
@@ -42,9 +42,7 @@ h6 {
     line-height: 1.3;
 }
 
-p {
-    margin-bottom: 20px;
-}
+
 
 p:last-child {
     margin-bottom: 0;
@@ -54,7 +52,7 @@ p:last-child {
  * Selection color
  */
 ::-moz-selection {
-    background-color: #f13131;
+    background-color: #f9423a;
     color: #fff;
 }
 
@@ -273,11 +271,7 @@ label {
 }
 
 .page-title {
-    margin-bottom: 75px;
-}
-
-.page-title img {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .page-title h2 {
@@ -293,6 +287,11 @@ label {
     font-size: 16px;
 }
 
+.page-title a {
+    font-size: 14px;
+    text-decoration: underline;
+}
+
 .page-title .title-bg {
     color: rgba(30, 37, 48, 0.07);
     font-size: 158px;
@@ -304,6 +303,10 @@ label {
     top: 50%;
     z-index: -1;
     transform: translateY(-50%);
+}
+
+.page-title.home {
+    padding-bottom: 25px;
 }
 
 .section-title {
@@ -530,7 +533,7 @@ label {
 }
 
 /*------------------------------------------------
-    Welcome Page
+    About Page
 -------------------------------------------------*/
 .author-image-large {
     position: absolute;
@@ -543,7 +546,7 @@ label {
 }
 
 /*------------------------------------------------
-    About Page
+    Projects Page
 -------------------------------------------------*/
 .about-author {
     margin-bottom: 23px;
@@ -710,7 +713,7 @@ label {
     border-bottom: 1px solid #293342;
     left: 0;
     margin-bottom: 0;
-    padding: 15px 34px 14px;
+    padding: 8px 34px 7px;
     position: absolute;
     right: 0;
     top: 0;
@@ -726,12 +729,16 @@ label {
     max-height: 377px;
 }
 
+.history-scroller.fr-reduce {
+    max-height: 350px;
+}
+
 .history-item {
     display: table;
     font-family: "Open Sans", sans-serif;
     padding-left: 32px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 98%;
 }
 
 .history-item>* {
@@ -1048,11 +1055,12 @@ label {
 
 .contact-wrapper {
     margin: auto;
-    width: 33%;
+    width: 100%;
 }
 
 .contact-block {
     margin-bottom: 30px;
+    padding-left: 33%;
 }
 
 .contact-block:last-child {
@@ -1322,6 +1330,10 @@ label {
     height: 100%;
 }
 
+.active {
+    color: #f9423a;
+}
+
 /*------------------------------------------------
 	Responsive Media Queries
 -------------------------------------------------*/
@@ -1331,7 +1343,12 @@ label {
 /*============================================================
 	For Small Desktop / tablet landscape
 ==============================================================*/
-@media (min-width: 980px) and (max-width: 1150px) {
+@media (min-width: 980px) {
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
     .author-image-large img {
         height: calc(80vh - 4px);
     }
@@ -1415,6 +1432,28 @@ label {
         display: block;
         margin: 20px 0;
     }
+
+    .history-block-wrapper {
+        display: none;
+    }
+
+    .page-title.cv {
+        margin-bottom: 0;
+    }
+
+    .page-title a {
+        color: #f9423a;
+        font-size: 24px;
+        text-decoration: underline;
+    }
+
+    .page-title a:focus {
+        color: #ffffff;
+    }
+
+    p:nth-last-child(2) {
+        margin-bottom: 20px;
+    }
 }
 
 /*============================================================
@@ -1478,10 +1517,11 @@ label {
     }
 
     .about-author .author-thumb {
-        border: 0 none;
+        border: 5px solid #1e2530;
         margin-bottom: 15px;
         margin-right: 0;
-        padding: 0;
+        padding: 5px;
+        width: 165px;
     }
 
     .about-author .author-desc b {
@@ -1549,6 +1589,38 @@ label {
         display: block;
         margin: 20px 0;
     }
+
+    .contact-block {
+        padding-left: unset;
+    }
+
+    .contact-block .media-body {
+        padding-left: 15px;
+    }
+
+    .preview-wrapper {
+        top: 91%;
+    }
+
+    .history-block-wrapper {
+        display: none;
+    }
+
+
+
+    .page-title a {
+        color: #f9423a;
+        font-size: 24px;
+        text-decoration: underline;
+    }
+
+    .page-title a:focus {
+        color: #ffffff;
+    }
+
+    p:nth-last-child(2) {
+        margin-bottom: 20px;
+    }
 }
 
 .dark {
@@ -1597,5 +1669,9 @@ label {
 .dark .btn-border {
     border-color: #1e2530;
 }
+
+
+
+
 
 /*# sourceMappingURL=style.css.map */
