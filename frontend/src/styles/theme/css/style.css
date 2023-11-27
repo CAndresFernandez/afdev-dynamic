@@ -23,7 +23,6 @@ a {
     transition: all 0.3s ease 0s;
 }
 
-a:hover,
 a:focus {
     color: #ffffff;
     text-decoration: none;
@@ -1673,5 +1672,4 @@ label {
 
 
 
-
-/*# sourceMappingURL=style.css.map */
+/* # sourceMappingURL=style.css.map */

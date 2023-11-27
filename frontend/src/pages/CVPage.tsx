@@ -1,4 +1,5 @@
 import React from "react";
+import Pdf from "../assets/downloads/AndresFernandez_CV.pdf";
 import { Link } from "react-router-dom";
 
 export default function CVPage() {
@@ -44,10 +45,7 @@ export default function CVPage() {
                       on an eternal quest to master his craft, no matter the
                       challenge.
                     </p>
-                    <Link
-                      to="../../backend/downloads/AndresFernandez_CV.pdf"
-                      target="_blank"
-                    >
+                    <Link to={Pdf} target="_blank">
                       Download my CV
                     </Link>
                   </div>
