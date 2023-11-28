@@ -375,6 +375,8 @@ label {
     background-color: rgba(255, 255, 255, 0.93);
 }
 
+
+
 /* End of container */
 .hexagon-item {
     cursor: pointer;
@@ -648,7 +650,9 @@ label {
 }
 
 .works-item img {
+    /* max-width: 300px; */
     width: 100%;
+
 }
 
 .works-item .overlay {
@@ -1342,7 +1346,7 @@ label {
 /*============================================================
 	For Small Desktop / tablet landscape
 ==============================================================*/
-@media (min-width: 980px) {
+@media (min-width: 992px) {
     body {
         height: 100%;
         overflow: hidden;
@@ -1356,9 +1360,9 @@ label {
 /*============================================================
 	Tablet (Portrait) Design for a width of 768px
 ==============================================================*/
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 991px) {
     body {
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     .page-title h2 {

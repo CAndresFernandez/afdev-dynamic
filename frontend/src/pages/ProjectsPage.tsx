@@ -44,8 +44,8 @@ export default function ProjectsPage() {
               </div>
 
               <div className="row isotope-gutter">
-                <div className="col-xs-12 col-sm-6 col-md-4"></div>
-                <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="col-xs-12  col-md-4"></div>
+                <div className="col-xs-12  col-md-4">
                   <figure className="works-item">
                     <img
                       src="./src/styles/theme/images/works/github.png"
@@ -63,7 +63,7 @@ export default function ProjectsPage() {
                     </Link>
                   </figure>
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4"></div>
+                <div className="col-xs-12  col-md-4"></div>
 
                 {/* <!-- if necessary to add smaller tabs on two rows -->
 
