@@ -1,25 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LangSwitcher from "../components/langSwitcher.tsx";
 
 export default function ContactPage() {
   return (
     <>
-      {/* language switcher */}
-      <div className="preview-wrapper" id="preview-wrapper">
-        <div className="switcher-head">
-          <ul className="lang-options list-none">
-            <li className="text-center" title="english">
-              <span id="en" className="active">
-                EN
-              </span>
-            </li>
-            <li className="text-center" title="français">
-              <span id="fr">FR</span>
-            </li>
-          </ul>
-          <div className="switcher-trigger bi bi-globe2"></div>
-        </div>
-      </div>
+      <LangSwitcher />
 
       <main className="site-wrapper">
         <div className="pt-table">
