@@ -618,7 +618,6 @@ label {
     background-color: #f9423a;
     border-radius: 10px;
     height: 8px;
-    width: 0;
 }
 
 .progress .skill-lavel {
@@ -709,6 +708,7 @@ label {
 .history-block {
     background-color: #1e2530;
     position: relative;
+    padding-top: 2px;
 }
 
 .history-block .section-title {
@@ -730,6 +730,7 @@ label {
 .history-scroller {
     padding-top: 82px;
     max-height: 377px;
+    overflow: scroll;
 }
 
 .history-scroller.fr-reduce {

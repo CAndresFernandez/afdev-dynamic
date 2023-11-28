@@ -89,49 +89,43 @@ export default function AboutPage() {
                     <div className="progress clear">
                       <div className="skill-name">Symfony 5/6</div>
                       <div className="skill-bar">
-                        <div className="bar"></div>
+                        <div className="bar" style={{ width: "80%" }}></div>
                       </div>
-                      <div className="skill-lavel" data-skill-value="80%"></div>
                     </div>
 
                     <div className="progress clear">
                       <div className="skill-name">Golang</div>
                       <div className="skill-bar">
-                        <div className="bar"></div>
+                        <div className="bar" style={{ width: "30%" }}></div>
                       </div>
-                      <div className="skill-lavel" data-skill-value="30%"></div>
                     </div>
 
                     <div className="progress clear">
                       <div className="skill-name">RESTful APIs</div>
                       <div className="skill-bar">
-                        <div className="bar"></div>
+                        <div className="bar" style={{ width: "70%" }}></div>
                       </div>
-                      <div className="skill-lavel" data-skill-value="70%"></div>
                     </div>
 
                     <div className="progress clear">
                       <div className="skill-name">MySQL</div>
                       <div className="skill-bar">
-                        <div className="bar"></div>
+                        <div className="bar" style={{ width: "70%" }}></div>
                       </div>
-                      <div className="skill-lavel" data-skill-value="70%"></div>
                     </div>
 
                     <div className="progress clear">
                       <div className="skill-name">HTML5/CSS3</div>
                       <div className="skill-bar">
-                        <div className="bar"></div>
+                        <div className="bar" style={{ width: "70%" }}></div>
                       </div>
-                      <div className="skill-lavel" data-skill-value="70%"></div>
                     </div>
 
                     <div className="progress clear">
                       <div className="skill-name">JS (React/node.js)</div>
                       <div className="skill-bar">
-                        <div className="bar"></div>
+                        <div className="bar" style={{ width: "30%" }}></div>
                       </div>
-                      <div className="skill-lavel" data-skill-value="30%"></div>
                     </div>
                   </div>
                 </div>
