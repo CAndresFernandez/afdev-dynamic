@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LangSwitcher from "../components/langSwitcher.tsx";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectsPage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <LangSwitcher />
@@ -19,12 +22,11 @@ export default function ProjectsPage() {
                 <div className="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                   <div className="page-title text-center" id="header-projects">
                     <h2>
-                      My <span className="primary">projects</span>
+                      {t("myPlural")}
+                      <span className="primary">{t("projects")}</span>
                       <span className="title-bg"></span>
                     </h2>
-                    <p>
-                      Check back often... this is a constant work in progress.
-                    </p>
+                    <p>{t("checkBack")}</p>
                   </div>
                 </div>
               </div>
@@ -43,8 +45,8 @@ export default function ProjectsPage() {
                     >
                       <div className="overlay"></div>
                       <figcaption className="works-inner" id="git">
-                        <h4>My Github</h4>
-                        <p>All of my Github repositories</p>
+                        <h4>{t("my")} Github</h4>
+                        <p>{t("github")}</p>
                       </figcaption>
                     </Link>
                   </figure>
@@ -71,7 +73,7 @@ export default function ProjectsPage() {
                 <div className="flex flex-middle space-between">
                   <span className="prev-page">
                     <Link to="/about" className="link" id="nav-about">
-                      &larr; About
+                      &larr; {t("navAbout")}
                     </Link>
                   </span>
                   <span className="next-page">

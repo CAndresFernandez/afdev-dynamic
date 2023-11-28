@@ -2,8 +2,11 @@ import React from "react";
 import Pdf from "../assets/downloads/AndresFernandez_CV.pdf";
 import { Link } from "react-router-dom";
 import LangSwitcher from "../components/langSwitcher.tsx";
+import { useTranslation } from "react-i18next";
 
 export default function CVPage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <LangSwitcher />
@@ -20,19 +23,13 @@ export default function CVPage() {
                 <div className="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
                   <div className="page-title cv text-center">
                     <h2 id="title-cv">
-                      My <span className="primary">CV</span>
+                      {t("my")}
+                      <span className="primary">CV</span>
                       <span className="title-bg"></span>
                     </h2>
-                    <p id="caption-cv">
-                      Determined, rigorous, and passionate professional. Vastly
-                      experienced in autonomous and collaborative execution of
-                      complex tasks requiring an elevated degree of analysis,
-                      critical thinking, and adaptability. Insatiable apprentice
-                      on an eternal quest to master his craft, no matter the
-                      challenge.
-                    </p>
+                    <p id="caption-cv">{t("cvHeader")}</p>
                     <Link to={Pdf} target="_blank">
-                      Download my CV
+                      {t("downloadCV")}
                     </Link>
                   </div>
                 </div>
@@ -42,7 +39,7 @@ export default function CVPage() {
                 <div className="col-xs-12 col-sm-6">
                   <div className="history-block">
                     <div className="section-title light clear">
-                      <h3 id="edu">Education</h3>
+                      <h3 id="edu">{t("education")}</h3>
                     </div>
 
                     <div className="history-scroller">
@@ -94,7 +91,7 @@ export default function CVPage() {
                 <div className="col-xs-12 col-sm-6">
                   <div className="history-block">
                     <div className="section-title light clear">
-                      <h3 id="exp">Experiences</h3>
+                      <h3 id="exp">{t("experience")}</h3>
                     </div>
 
                     <div className="history-scroller">
@@ -168,7 +165,7 @@ export default function CVPage() {
                       className="link"
                       id="nav-projects-prev"
                     >
-                      &larr; Projects
+                      &larr; {t("projects")}
                     </Link>
                   </span>
                   <span className="next-page">

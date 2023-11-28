@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LangSwitcher from "../components/langSwitcher.tsx";
+import { useTranslation } from "react-i18next";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <LangSwitcher />
@@ -19,13 +22,11 @@ export default function ContactPage() {
                 <div className="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                   <div className="page-title text-center" id="header-contact">
                     <h2>
-                      Get in <span className="primary">touch</span>
+                      {t("contact")}
+                      <span className="primary">{t("me")}</span>
                       <span className="title-bg"></span>
                     </h2>
-                    <p>
-                      Send me a message if you have any questions, or just want
-                      to chat.
-                    </p>
+                    <p>{t("contactQuip")}</p>
                   </div>
                 </div>
               </div>
@@ -60,7 +61,7 @@ export default function ContactPage() {
                           target="_blank"
                           id="linkedin"
                         >
-                          Click to see my profile
+                          {t("linkedin")}
                         </Link>
                       </p>
                     </div>

@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LangSwitcher from "../components/langSwitcher.tsx";
+import { useTranslation } from "react-i18next";
 
 export default function AboutPage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <LangSwitcher />
@@ -19,14 +22,11 @@ export default function AboutPage() {
                 <div className="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                   <div className="page-title text-center" id="header-about">
                     <h2>
-                      About <span className="primary">me</span>
+                      {t("headerAbout")}
+                      <span className="primary">{t("I")}</span>
                       <span className="title-bg"></span>
                     </h2>
-                    <p>
-                      After a fruitful 18-year career as a professional chef, I
-                      made the big switch to tech. Now I'm on the hunt for
-                      quality programming experience wherever I can get it.
-                    </p>
+                    <p>{t("aboutQuip")}</p>
                   </div>
                 </div>
 
@@ -41,36 +41,31 @@ export default function AboutPage() {
 
                     <div className="author-desc" id="author-desc">
                       <p>
-                        <b>From:</b> Atlanta, Georgia
+                        <b>{t("from")}: </b>
+                        {t("Atlanta")}
                       </p>
                       <p>
-                        <b>Living in:</b> Paris, France
+                        <b>{t("living")}:</b> Paris, France
                       </p>
                       <p>
-                        <b>Speaks:</b> English, Français, Español, Deutsch,
-                        한국어
+                        <b>{t("speaks")}:</b> English, Français, Español,
+                        Deutsch, 한국어
                       </p>
                       <p>
-                        <b>Interests:</b> Arsenal FC, Gaming, Tennis, Hiking,
-                        Amari, Guitar
+                        <b>{t("interests")}:</b> Arsenal FC, {t("videoGames")},
+                        Tennis, {t("hiking")}, Amari, {t("guitar")}
                       </p>
                     </div>
                   </div>
 
                   <p id="caption2">
-                    A decidedly atypical profile indeed, but I am insatiably
-                    curious, meticulous, and passionate about clean, scalable
-                    code. Even better, I come equipped with soft skills and an
-                    attention to detail that only experience can provide.
-                    Rigour, initiative, and perseverance are qualities which
-                    continue to define me in both professional and personal
-                    endeavors.
+                    {t("aboutCaptionLn1")} {t("aboutCaptionLn2")}
                   </p>
                 </div>
 
                 <div className="col-xs-12 col-md-6">
                   <div className="section-title clear">
-                    <h3 id="skills">Skills</h3>
+                    <h3 id="skills">{t("skills")}</h3>
                   </div>
                   <div className="skill-wrapper">
                     <div className="progress clear">
@@ -124,7 +119,7 @@ export default function AboutPage() {
                 <div className="flex flex-middle space-between">
                   <span className="prev-page">
                     <Link to="/" className="link" id="nav-home">
-                      &larr; Home
+                      &larr; {t("navHome")}
                     </Link>
                   </span>
                   <span className="next-page">
@@ -133,7 +128,7 @@ export default function AboutPage() {
                       className="link"
                       id="nav-projects-next"
                     >
-                      Projects &rarr;
+                      {t("projects")} &rarr;
                     </Link>
                   </span>
                 </div>

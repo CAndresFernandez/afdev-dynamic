@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LangSwitcher from "../components/langSwitcher.tsx";
+import { useTranslation } from "react-i18next";
 
 export default function HomePage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <LangSwitcher />
@@ -17,13 +20,12 @@ export default function HomePage() {
                 <div className="col-xs-12 col-md-10 col-lg-12">
                   <div className="page-title home text-center">
                     <h2>
-                      Andres <span className="primary">Fernandez</span>
+                      Andres<span className="primary">Fernandez</span>
                     </h2>
                     <p id="caption-home">
-                      Developer and former chef in Paris, FR. serving up more
-                      fresh code than fine foods these days.
+                      {t("homeCaptionLn1")}
                       <br />
-                      Look around to learn more.
+                      {t("homeCaptionLn2")}
                     </p>
                   </div>
                 </div>
@@ -48,7 +50,7 @@ export default function HomePage() {
                             <i className="tf-profile-male"></i>
                           </span>
                           <span className="title" id="btn-about">
-                            About
+                            {t("touch")}
                           </span>
                         </span>
                         <svg
@@ -82,7 +84,7 @@ export default function HomePage() {
                             <i className="tf-tools-2"></i>
                           </span>
                           <span className="title" id="btn-projects">
-                            Projects
+                            {t("projects")}
                           </span>
                         </span>
                         <svg
