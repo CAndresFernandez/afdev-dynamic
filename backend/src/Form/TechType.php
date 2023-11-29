@@ -18,6 +18,7 @@ class TechType extends AbstractType
             ->add('version', NumberType::class, [
                 'required' => false
             ])
+            ->add('level', NumberType::class)
         ;
     }
 

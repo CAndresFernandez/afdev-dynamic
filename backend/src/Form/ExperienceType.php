@@ -36,17 +36,11 @@ class ExperienceType extends AbstractType
             ->add('jobTitle', TextType::class)
             ->add('icon', ChoiceType::class, [
                 'choices' => [
-                    'School' => 1,
-                    'Kitchen' => 2,
-                    'Tech' => 3,
-                    'Management' => 4
+                    'School' => "tf-documents5",
+                    'Kitchen' => 'fa-solid fa-kitchen-set',
+                    'Tech' => 'bi bi-laptop',
+                    'Management' => 'fa-solid fa-people-roof'
                 ],
-                'choice_attr' => [
-                    'School' => ['class' => 'tf-documents5'],
-                    'Kitchen' => ['class' => 'fa-solid fa-kitchen-set'],
-                    'Tech' => ['class' => 'bi bi-laptop'],
-                    'Management' => ['class' => 'fa-solid fa-people-roof']
-                ]
             ])
             ->add('responsibilities', CollectionType::class, [
                 'entry_type' => TextareaType::class,

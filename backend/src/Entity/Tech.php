@@ -32,6 +32,9 @@ class Tech
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $version = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $level = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -57,6 +60,18 @@ class Tech
     public function setVersion(?string $version): static
     {
         $this->version = $version;
+
+        return $this;
+    }
+
+    public function getLevel(): ?string
+    {
+        return $this->level;
+    }
+
+    public function setLevel(string $level): static
+    {
+        $this->level = $level;
 
         return $this;
     }

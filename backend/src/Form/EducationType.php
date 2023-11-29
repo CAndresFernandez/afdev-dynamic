@@ -43,17 +43,11 @@ class EducationType extends AbstractType
             ->add('icon', ChoiceType::class, [
                 'placeholder' => 'Choose an icon',
                 'choices' => [
-                    'School' => 'School',
-                    'Tech' => 'Tech',
-                    'Management' => 'Management',
-                    'Kitchen' => 'Kitchen'
+                    'School' => 'tf-documents5',
+                    'Tech' => 'bi bi-laptop',
+                    'Management' => 'fa-solid fa-people-roof',
+                    'Kitchen' => 'fa-solid fa-kitchen-set'
                 ],
-                'choice_attr' => [
-                    'School' => ['class' => 'tf-documents5'],
-                    'Tech' => ['class' => 'bi bi-laptop'],
-                    'Management' => ['class' => 'fa-solid fa-people-roof'],
-                    'Kitchen' => ['class' => 'fa-solid fa-kitchen-set'],
-                ]
             ])
         ;
     }

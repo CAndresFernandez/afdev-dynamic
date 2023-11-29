@@ -16,7 +16,7 @@ use App\Repository\ExperienceRepository;
         new GetCollection,
     ],
     order: [
-        'startYear' => 'ASC'
+        'startYear' => 'DESC'
     ]
 )]
 class Experience

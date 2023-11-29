@@ -16,7 +16,7 @@ use App\Repository\EducationRepository;
         new GetCollection,
     ],
     order: [
-        'startYear' => 'ASC'
+        'startYear' => 'DESC'
     ]
 )]
 class Education
