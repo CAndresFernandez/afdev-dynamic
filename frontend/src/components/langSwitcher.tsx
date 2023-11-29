@@ -41,7 +41,10 @@ const LangSwitcher: React.FC = () => {
             <span
               id="en"
               className={`${activeLang === "en" ? "active" : ""}`}
-              onClick={() => handleLangSwitch("en")}
+              onClick={() => {
+                handleLangSwitch("en");
+                handleSwitcherClick();
+              }}
               dangerouslySetInnerHTML={{
                 __html: t("EN", { lng: "en" }),
               }}
@@ -51,7 +54,10 @@ const LangSwitcher: React.FC = () => {
             <span
               id="fr"
               className={`${activeLang === "fr" ? "active" : ""}`}
-              onClick={() => handleLangSwitch("fr")}
+              onClick={() => {
+                handleLangSwitch("fr");
+                handleSwitcherClick();
+              }}
               dangerouslySetInnerHTML={{
                 __html: t("FR", { lng: "fr" }),
               }}
