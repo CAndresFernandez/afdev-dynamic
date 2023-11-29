@@ -1,9 +1,10 @@
 import React from "react";
 import Pdf from "../assets/downloads/AndresFernandez_CV.pdf";
 import { Link } from "react-router-dom";
-import LangSwitcher from "../components/LangSwitcher.tsx";
 import { useTranslation } from "react-i18next";
+import ExperienceList from "../components/ExperienceList.tsx";
 import EducationList from "../components/EducationList.tsx";
+import LangSwitcher from "../components/LangSwitcher.tsx";
 
 export default function CVPage() {
   const { t } = useTranslation();
@@ -36,7 +37,14 @@ export default function CVPage() {
                 </div>
               </div>
 
-              <EducationList />
+              <div className="row history-block-wrapper">
+                <div className="col-xs-12 col-sm-6">
+                  <EducationList />
+                </div>
+                <div className="col-xs-12 col-sm-6">
+                  <ExperienceList />
+                </div>
+              </div>
             </div>
 
             <nav className="page-nav clear">

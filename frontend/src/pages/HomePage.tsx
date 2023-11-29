@@ -50,7 +50,7 @@ export default function HomePage() {
                             <i className="tf-profile-male"></i>
                           </span>
                           <span className="title" id="btn-about">
-                            {t("touch")}
+                            {t("navAbout")}
                           </span>
                         </span>
                         <svg

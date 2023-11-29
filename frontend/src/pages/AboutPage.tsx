@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LangSwitcher from "../components/LangSwitcher.tsx";
 import { useTranslation } from "react-i18next";
+import TechList from "../components/TechList.tsx";
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -63,54 +64,7 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="col-xs-12 col-md-6">
-                  <div className="section-title clear">
-                    <h3 id="skills">{t("skills")}</h3>
-                  </div>
-                  <div className="skill-wrapper">
-                    <div className="progress clear">
-                      <div className="skill-name">Symfony 5/6</div>
-                      <div className="skill-bar">
-                        <div className="bar" style={{ width: "80%" }}></div>
-                      </div>
-                    </div>
-
-                    <div className="progress clear">
-                      <div className="skill-name">Golang</div>
-                      <div className="skill-bar">
-                        <div className="bar" style={{ width: "30%" }}></div>
-                      </div>
-                    </div>
-
-                    <div className="progress clear">
-                      <div className="skill-name">RESTful APIs</div>
-                      <div className="skill-bar">
-                        <div className="bar" style={{ width: "70%" }}></div>
-                      </div>
-                    </div>
-
-                    <div className="progress clear">
-                      <div className="skill-name">MySQL</div>
-                      <div className="skill-bar">
-                        <div className="bar" style={{ width: "70%" }}></div>
-                      </div>
-                    </div>
-
-                    <div className="progress clear">
-                      <div className="skill-name">HTML5/CSS3</div>
-                      <div className="skill-bar">
-                        <div className="bar" style={{ width: "70%" }}></div>
-                      </div>
-                    </div>
-
-                    <div className="progress clear">
-                      <div className="skill-name">JS (React/node.js)</div>
-                      <div className="skill-bar">
-                        <div className="bar" style={{ width: "30%" }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <TechList />
               </div>
             </div>
 
