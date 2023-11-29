@@ -10,7 +10,6 @@ const ExperienceList = () => {
     API.get(`experiences`).then((res) => {
       const experiences = res.data;
       setExperiences(experiences["hydra:member"]);
-      console.log(experiences);
     });
   }, []);
 
