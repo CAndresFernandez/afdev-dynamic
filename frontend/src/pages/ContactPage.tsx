@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LangSwitcher from "../components/langSwitcher.tsx";
+import LangSwitcher from "../components/LangSwitcher.tsx";
 import { useTranslation } from "react-i18next";
 
 export default function ContactPage() {
